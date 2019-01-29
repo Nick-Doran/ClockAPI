@@ -1,21 +1,37 @@
-﻿<script>
+﻿@using Clockwork.Web.Models;
+@using Newtonsoft.Json;
+
+
+<script>
 function UserAction() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("output").innerHTML = this.responseText;
-        }
+            var obj1 = { "currentTimeQueryId": 24, "time": "2019-01-29T12:19:54.15739-05:00" };
+            obj1 = JSON.stringify(obj1);
+            alert(obj1);
+            //var obj = "{" + this.responseText + "}";
+            obj1 = JSON.parse(obj1);
+            document.getElementById("currentTimeQueryId").innerHTML = obj1.currentTimeQueryId;
+
+        } 
     };
-    xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime", true);  //"http://127.0.0.1:5000/api/currenttime" "http://localhost:54963/api/currenttime"
+    xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send();
-
+    {
+      //  "currentTimeQueryId": 24, "time": "2019-01-29T12:19:54.15739-05:00",
+        //    "clientIp": "127.0.0.1", "utcTime": "2019-01-29T17:19:54.15739Z"
+    }
 }
 </script>
+ 
 
 <h2>AWH Clockwork Project @ViewData["Version"] on @ViewData["Runtime"]!</h2>
 
-
 <button type="submit" onclick="UserAction()">Get the time</button>
 
-<p id="output"></p>
+<p id="currentTimeQueryId"></p>
+<p id="time"></p>
+<p id="clientIp"></p>
+<p id="utcTime"></p>
