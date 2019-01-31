@@ -16,17 +16,18 @@ namespace Clockwork.API.Controllers
         [HttpGet]
         public IActionResult GetTimeQueries()
         {
-            List<CurrentTimeQuery> timequeries = new List<CurrentTimeQuery>();
+
+            List<CurrentTimeQuery> timeQueries = new List<CurrentTimeQuery>();
             using (var db = new ClockworkContext())
             {
                 var query = db.CurrentTimeQueries;
                 foreach (CurrentTimeQuery timeQuery in query)
                 {
-                    timequeries.Add(timeQuery);
+                    timeQueries.Add(timeQuery);
                 }
             }
 
-            return Ok(timequeries);
+            return Ok(timeQueries);
         }
 
     }

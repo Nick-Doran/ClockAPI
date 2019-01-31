@@ -1,8 +1,58 @@
-﻿
+﻿@using Clockwork.Web.Models;
+@model CurrentTimeQueries
 @{
     ViewBag.Title = "SeeAllQueries";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>SeeAllQueries</h2>
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var results = this.responseText;
+            results = JSON.parse(results);
+          
+            var box = '<table class="table table-bordered" id="Table"><tr><th>Query ID</th><th>Time</th> <th>Cient Ip</th><th>UTC Time</th></tr>'; 
+            for (var i = 0; i < results.length; i++) {
+                results[i].time = results[i].time.replace("T", " ");
+                results[i].time = results[i].time.substring(0, 19);
 
+                results[i].utcTime= results[i].utcTime.replace("T", " ");
+                results[i].utcTime = results[i].utcTime.substring(0, 19);
+
+                box += "<tr>" +
+                    "<td>" + results[i].currentTimeQueryId + "</td>" +
+                    "<td>" + results[i].time + "</td>" +
+                    "<td>" + results[i].clientIp + "</td>" +
+                    "<td>" + results[i].utcTime + "</td>" +
+                    "</tr>";
+            };
+            box += "</table>";
+            document.getElementById('box').innerHTML = box;
+        }
+    }
+    xhttp.open("Get", "http://127.0.0.1:54963/api/timequeries", true);
+    xhttp.setRequestHeader("content-type", "application/json");
+    xhttp.send();
+
+</script>
+
+<h2>See All Queries in Database</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Data from API
+    </div>   <!--en dof panel-heading -->
+    <div id ="box" class="panel-body">
+        <table class="table table-bordered" id="Table">
+            <tr>
+                <th>Query ID</th>
+                <th>Time</th>
+                <th>Cient Ip</th>
+                <th>UTC Time</th>
+            </tr> 
+              
+        <!--end of table-row -->
+        </table>   <!--end of table -->
+    </div> <!--end of Panel-body -->
+</div> <!--end of Panel -->  
