@@ -8,10 +8,23 @@
 
     <title>@ViewBag.Title</title>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="~/Scripts/scrolling-nav.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css" />
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" />
+
+
+
 
     <!-- Custom styles for this template -->
     <link href="~/Content/StyleSheet.css" rel="stylesheet" />
@@ -33,9 +46,6 @@
                         <a class="nav-link js-scroll-trigger" href="/home/SeeAllQueries">See All Time Queries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -43,41 +53,14 @@
         </div>
     </nav>
 
-    <header class="bg-primary text-white">
+    <header class="bg-primary text-white rounding">
         <div class="container text-center">
             <h1>Welcome to AWH Clockwork Project @ViewData["Version"] on @ViewData["Runtime"]!</h1>
             <p class="lead">A .NET Framework 4.5 MVC Project and .NET Core 2.0 API</p>
         </div>
     </header>
-        @RenderBody()
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>About this page</h2>
-                    <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-                    <ul>
-                        <li>Clickable nav links that smooth scroll to page sections</li>
-                        <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                        <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                        <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Services we offer</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @RenderBody()
+    
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -98,14 +81,14 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="~/Scripts/jquery.min.js"></script>
-    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="~/Scripts/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="~/Scripts/jquery.easing.min.js"></script>
-
-    <!-- Custom JavaScript for this theme -->
-    <script src="~/Scripts/scrolling-nav.js"></script>
+        <!-- Custom JavaScript for this theme -->
+        <script src="~/Scripts/scrolling-nav.js"></script>
 
 </body>
 
