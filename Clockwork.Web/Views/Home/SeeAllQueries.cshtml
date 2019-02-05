@@ -9,19 +9,20 @@
         if (this.readyState == 4 && this.status == 200) {
             var results = this.responseText;
             results = JSON.parse(results);
-            var box = '<table class="display" id="Table_ID"> <thead> <tr> <th>Query ID</th><th>Time</th> <th>Cient Ip</th><th>UTC Time</th></tr> </thead> <tbody>';
+            var box = '<table class="display" id="Table_ID"> <thead> <tr> <th>Query ID</th><th>Time</th> <th>Cient Ip</th> <th>UTC Time</th> <th>Time Zone</th> </tr> </thead> <tbody>';
             for (var i = 0; i < results.length; i++) {
                 results[i].time = results[i].time.replace("T", " ");
                 results[i].time = results[i].time.substring(0, 19);
-
                 results[i].utcTime = results[i].utcTime.replace("T", " ");
                 results[i].utcTime = results[i].utcTime.substring(0, 19);
+                results[i].timezone = results[i].timezone.replace("_", " ");
 
                 box += "<tr>" +
                     "<td>" + results[i].currentTimeQueryId + "</td>" +
                     "<td>" + results[i].time + "</td>" +
                     "<td>" + results[i].clientIp + "</td>" +
                     "<td>" + results[i].utcTime + "</td>" +
+                    "<td>" + results[i].timezone + "</td>"
                     "</tr>";
             };
             box += "</tbody> </table>";

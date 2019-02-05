@@ -5,22 +5,24 @@ using System.Collections.Generic;
 
 namespace Clockwork.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/{id}")]
     public class CurrentTimeController : Controller
     {
         // GET api/currenttime
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(string id)
         {
             var utcTime = DateTime.UtcNow;
             var serverTime = DateTime.Now;
             var ip = this.HttpContext.Connection.RemoteIpAddress.ToString();
+            var timezone = id;
 
             var returnVal = new CurrentTimeQuery
             {
                 UTCTime = utcTime,
                 ClientIp = ip,
-                Time = serverTime
+                Time = serverTime,
+                Timezone = timezone
             };
 
             using (var db = new ClockworkContext())

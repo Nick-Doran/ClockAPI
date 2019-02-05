@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Clockwork.API.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialWithTimezone : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

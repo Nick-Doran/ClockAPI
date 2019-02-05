@@ -23,16 +23,14 @@
     
 
     function UserAction() {
+        var timezone = document.getElementById('dropdown').value;
+        var params = timezone.replace("/",":");
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                var timeZone = document.getElementById('dropdown').value;
-                alert(timeZone);
-                var adjustedTime = new Date().toLocaleString("en-US", { timeZone: timeZone });
-                
-                usaTime = new Date(adjustedTime)
-                
-                alert(usaTime);
+                var adjustedTime = new Date().toLocaleString("en-US", { timeZone: timezone });
+                selectedTimezone = new Date(adjustedTime)
+                //alert(selectedTimezone);
                 var obj = JSON.parse(this.responseText);
                 adjustedTime = adjustedTime.replace("T", " ");
                 adjustedTime= adjustedTime.substring(0, 20);
@@ -42,9 +40,10 @@
                 document.getElementById("time").innerHTML = "Time: " + adjustedTime;
                 document.getElementById("clientIp").innerHTML = "Client IP: " + obj.clientIp;
                 document.getElementById("utcTime").innerHTML = "UTC Time: " + obj.utcTime;
+                document.getElementById("timezone").innerHTML = "Time Zone: " + obj.timezone.replace("_", " ");
             }
         };
-        xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime", true);
+        xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime/" + params , true);
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
     }
@@ -58,6 +57,7 @@
 <p id="time"></p>
 <p id="clientIp"></p>
 <p id="utcTime"></p>
+<p id="timezone"></p>
 
 @Html.DropDownListFor(n => Model.TimezoneId, Model.TimezoneList,
    new { @class = "form-control", title = "Timezone to display dates.", id="dropdown" })
