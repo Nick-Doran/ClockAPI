@@ -1,26 +1,64 @@
-﻿<script>
-function UserAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            document.getElementById("currentTimeQueryId").innerHTML = "Current Time Query ID: " + obj.currentTimeQueryId;
-            document.getElementById("time").innerHTML = "Time: " + obj.time;
-            document.getElementById("clientIp").innerHTML = "Client IP: " + obj.clientIp;
-            document.getElementById("utcTime").innerHTML = "UTC Time: " + obj.utcTime;
-        } 
-    };
-    xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime", true);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send();
-}
+﻿@model Clockwork.Web.Models.CurrentTimeQuery
+@using Clockwork.Web;
+<script>
+    
+    window.onload = function () {
+        var clientTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        document.getElementById('dropdown').value = clientTimezone;
+     
+    }
+    //var d = new Date;
+    //alert(d.toString());
+    //d = d.toString();
+    //alert(d.substr(35, d.length - 36));
+    //var timezoneoffset = d.getTimezoneOffset();
+    //alert(timezoneoffset);
+    //var e = document.getElementById('TimezoneId');
+    //var selected = e.options[e.selectedIndex].value;
+    //document.onclick = function () {
+    //    var element = document.getElementById('TimezoneId');
+    //    var selected = element.options[e.selectedIndex].value;
+    //    alert(selected);
+    //};
+    
+
+    function UserAction() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var timeZone = document.getElementById('dropdown').value;
+                alert(timeZone);
+                var adjustedTime = new Date().toLocaleString("en-US", { timeZone: timeZone });
+                
+                usaTime = new Date(adjustedTime)
+                
+                alert(usaTime);
+                var obj = JSON.parse(this.responseText);
+                adjustedTime = adjustedTime.replace("T", " ");
+                adjustedTime= adjustedTime.substring(0, 20);
+                obj.utcTime = obj.utcTime.replace("T", " ");
+                obj.utcTime = obj.utcTime.substring(0, 19);
+                document.getElementById("currentTimeQueryId").innerHTML = "Current Time Query ID: " + obj.currentTimeQueryId;
+                document.getElementById("time").innerHTML = "Time: " + adjustedTime;
+                document.getElementById("clientIp").innerHTML = "Client IP: " + obj.clientIp;
+                document.getElementById("utcTime").innerHTML = "UTC Time: " + obj.utcTime;
+            }
+        };
+        xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime", true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+    }
 </script>
 
 <h4>Click the button to call the API</h4>
- 
+
 <button type="submit" onclick="UserAction()">Get the time</button>
 
 <p id="currentTimeQueryId"></p>
 <p id="time"></p>
 <p id="clientIp"></p>
 <p id="utcTime"></p>
+
+@Html.DropDownListFor(n => Model.TimezoneId, Model.TimezoneList,
+   new { @class = "form-control", title = "Timezone to display dates.", id="dropdown" })
+

@@ -19,7 +19,8 @@ namespace Clockwork.Web.Controllers
             ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
             ViewData["Runtime"] = isMono ? "Mono" : ".NET";
 
-            return View();
+            CurrentTimeQuery model = new CurrentTimeQuery();
+            return View(model);
         }
 
         public ActionResult SeeAllQueries()
