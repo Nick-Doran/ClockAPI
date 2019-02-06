@@ -53,24 +53,31 @@
         </div>
     </nav>
 
-    <header class="bg-primary text-white rounding">
-        <div class="container text-center">
-            <h1>Welcome to AWH Clockwork Project @ViewData["Version"] on @ViewData["Runtime"]!</h1>
-            <p class="lead">A .NET Framework 4.5 MVC Project and .NET Core 2.0 API</p>
-        </div>
-    </header>
-    @RenderBody()
-    
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Contact us</h2>
-                    <p class="lead">This page was built by Nick Doran, who can be reached at <a>chasedoran6@gmail.com</a></p>
-                </div>
+        <header id="myheader" class="bg-primary text-white rounding">
+            <div class="container text-center">
+                <h1>Welcome to AWH Clockwork Project @ViewData["Version"] on @ViewData["Runtime"]!</h1>
+                <p class="lead">A .NET Framework 4.5 MVC Project and .NET Core 2.0 API</p>
+            </div>
+        </header>
+        <div id="white-border">
+    <div id="window-container" class="container-fluid">
+            <div id="body-container" class="container">
+                @RenderBody()
+                <section id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2>Contact us</h2>
+                                <p class="lead">This page was built by Nick Doran, who can be reached at <a>chasedoran6@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
+    </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -81,14 +88,14 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-        <script src="~/Scripts/jquery.min.js"></script>
-        <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-        <!-- Plugin JavaScript -->
-        <script src="~/Scripts/jquery.easing.min.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
-        <!-- Custom JavaScript for this theme -->
-        <script src="~/Scripts/scrolling-nav.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="~/Scripts/scrolling-nav.js"></script>
 
 </body>
 

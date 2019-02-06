@@ -23,24 +23,26 @@
     
 
     function UserAction() {
+        var d = new Date();
+        alert(d.toString());
         var timezone = document.getElementById('dropdown').value;
-        var params = timezone.replace("/",":");
+        var params = timezone.replace("/",",");
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var adjustedTime = new Date().toLocaleString("en-US", { timeZone: timezone });
-                selectedTimezone = new Date(adjustedTime)
-                //alert(selectedTimezone);
+                selectedTimezone = new Date(adjustedTime);
                 var obj = JSON.parse(this.responseText);
-                adjustedTime = adjustedTime.replace("T", " ");
-                adjustedTime= adjustedTime.substring(0, 20);
-                obj.utcTime = obj.utcTime.replace("T", " ");
+                adjustedTime = adjustedTime.replace("T", " "); //cutting 'T' out of string
+                adjustedTime= adjustedTime.substring(0, 20); //cutting out milliseconds
+                obj.utcTime = obj.utcTime.replace("T", " "); 
                 obj.utcTime = obj.utcTime.substring(0, 19);
+                obj.timezone = obj.timezone.replace("_", " "); 
                 document.getElementById("currentTimeQueryId").innerHTML = "Current Time Query ID: " + obj.currentTimeQueryId;
                 document.getElementById("time").innerHTML = "Time: " + adjustedTime;
                 document.getElementById("clientIp").innerHTML = "Client IP: " + obj.clientIp;
                 document.getElementById("utcTime").innerHTML = "UTC Time: " + obj.utcTime;
-                document.getElementById("timezone").innerHTML = "Time Zone: " + obj.timezone.replace("_", " ");
+                document.getElementById("timezone").innerHTML = "Time Zone: " + obj.timezone;
             }
         };
         xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime/" + params , true);

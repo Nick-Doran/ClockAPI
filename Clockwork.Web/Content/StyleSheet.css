@@ -33,3 +33,21 @@ section {
     position:fixed;
     bottom:0;
 }
+
+#body-container{
+    /*padding: 0 10px;*/
+    background-color:white;
+}
+@media (min-width: 992px){
+
+#window-container{
+    background-image: url("dark-blue-textured-background.jpg");
+    box-shadow: 20px 10px grey !important;
+}
+}
+#white-border{
+    padding: 0 5px;
+}
+#myheader{ 
+    background-color:navy !important;
+}

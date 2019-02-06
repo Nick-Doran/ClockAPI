@@ -93,6 +93,10 @@
     <Compile Include="Models\CurrentTimeQuery.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\black-white-background.jpg" />
+    <Content Include="Content\dark-blue-textured-background.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="Content\gravel.png" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
