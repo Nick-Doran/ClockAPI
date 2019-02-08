@@ -2,52 +2,72 @@
  * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
  */
 
-header {
-    padding: 154px 0 100px;
-    
+#body-container{
+    background-color:white;
+    opacity:.9;
 }
-
 @media (min-width: 992px) {
     header {
-        padding: 100px 0 50px;
+        padding: 60px 0 30px;
     }
 }
-
+@media (min-width:320px){
+    #window-container {
+        background-image: url("black-bricks-4.jpg");
+    }
+}
+header{
+    padding:60px 0 0;
+}
 section {
     padding: 100px 0;
 }
 
-.padding{
+.panel-padding {
     padding: 60px 60px;
 }
 
-.rounding{
-    border-radius:20px 20px 50px 50px;
-}
-
-#table_panel_heading{
+#table_panel_heading {
     padding: 20px 20px;
 }
 
-#contact_us{
-    position:fixed;
-    bottom:0;
+#contact_us {
+    position: fixed;
+    bottom: 0;
 }
-
-#body-container{
-    /*padding: 0 10px;*/
-    background-color:white;
+#body-container {
+    background-color: white;
 }
-@media (min-width: 992px){
-
-#window-container{
-    background-image: url("dark-blue-textured-background.jpg");
-    box-shadow: 20px 10px grey !important;
+#mainNav {
+    background-image: url("Chalkboard-Background-xs.png") !important;  
 }
+#canvas {
+    padding: 10px 0 10px 0 !important;
+    background-image: url("black-bricks-4.jpg");
 }
-#white-border{
-    padding: 0 5px;
+ #myheader{
+    background-image: url("Chalkboard-Background-xs.png");
+ }
+ #canvas-box{
+     padding: 10px 0 10px 0;
+ }
+ #dropdown-box{
+     padding:10px 0 10px 0;
+ }
+@font-face {
+    font-family: 'code';
+    src: url("CODE Bold.otf") format('opentype');
 }
-#myheader{ 
-    background-color:navy !important;
+#myheadertext {
+    font-family: 'code';
+    font-size:2em;
+   line-height: 43px;
+}
+#apiheader{
+    margin:auto;
+    padding: 0 0 10px 0;
+}
+#apibutton{
+    padding:10px 0 0 0;
+    padding:
 }

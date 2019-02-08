@@ -93,12 +93,23 @@
     <Compile Include="Models\CurrentTimeQuery.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\black-and-white-wallpaper-iphone-black-brick-wallpaper.jpg" />
+    <Content Include="Content\black-bricks-2.jpg" />
+    <Content Include="Content\black-bricks-3.jpg" />
+    <Content Include="Content\black-bricks-4.jpg" />
+    <Content Include="Content\Black-bricks-wall_1920x1440.jpg" />
     <Content Include="Content\black-white-background.jpg" />
+    <Content Include="Content\brick-texture-background.jpg" />
+    <Content Include="Content\Chalkboard-Background-xs.png" />
+    <Content Include="Content\chalkboard-background.jpg" />
+    <Content Include="Content\chalkboard-wall.jpg" />
     <Content Include="Content\dark-blue-textured-background.jpg" />
+    <Content Include="Content\stars-bg.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Content\gravel.png" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\clock.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\scrolling-nav.js" />
@@ -113,6 +124,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\SeeAllQueries.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Tequilla Sunrise.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\chalkmars_regular_sample.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CODE Bold.otf" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
