@@ -30,7 +30,7 @@
                 SeeAllQueries();
             }
         };
-        xhttp.open("GET", "http://127.0.0.1:54963/api/currenttime/" + params, true);
+        xhttp.open("GET", "http://127.0.0.1:5000/api/currenttime/" + params, true);
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
     }
@@ -66,7 +66,7 @@
                 $("#Table_ID").DataTable();
             }
         }
-        xhttp.open("Get", "http://127.0.0.1:54963/api/timequeries", true);
+        xhttp.open("Get", "http://127.0.0.1:5000/api/timequeries", true);
         xhttp.setRequestHeader("content-type", "application/json");
         xhttp.send();
     }
