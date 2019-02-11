@@ -15,7 +15,7 @@ namespace Clockwork.API.Controllers
             var utcTime = DateTime.UtcNow;
             var serverTime = DateTime.Now;
             var ip = this.HttpContext.Connection.RemoteIpAddress.ToString();
-            var timezone = id;
+            var timezone = id.Replace(",", "/");
 
             var returnVal = new CurrentTimeQuery
             {

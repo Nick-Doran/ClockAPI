@@ -24,7 +24,7 @@ section {
 }
 
 .panel-padding {
-    padding: 60px 60px;
+    padding: 5px 60px;
 }
 
 #table_panel_heading {
@@ -69,5 +69,8 @@ section {
 }
 #apibutton{
     padding:10px 0 0 0;
-    padding:
+}
+#seeallqueriesh2{
+    margin:auto;
+    text-align:center;
 }
