@@ -1,8 +1,4 @@
-﻿/*!
- * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
- */
-
-#body-container{
+﻿#body-container{
     background-color:white;
     opacity:.9;
 }
@@ -22,31 +18,32 @@ header{
 section {
     padding: 100px 0;
 }
-
 .panel-padding {
     padding: 5px 60px;
 }
-
 #table_panel_heading {
     padding: 20px 20px;
 }
-
 #contact_us {
     position: fixed;
     bottom: 0;
+}
+#contact{
+    margin:auto;
+    text-align:center;
 }
 #body-container {
     background-color: white;
 }
 #mainNav {
-    background-image: url("Chalkboard-Background-xs.png") !important;  
+    background-image: url("wood2.jpg");
 }
 #canvas {
     padding: 10px 0 10px 0 !important;
     background-image: url("black-bricks-4.jpg");
 }
  #myheader{
-    background-image: url("Chalkboard-Background-xs.png");
+    background-image: url("wood2.jpg");
  }
  #canvas-box{
      padding: 10px 0 10px 0;
@@ -74,3 +71,9 @@ section {
     margin:auto;
     text-align:center;
 }
+footer{
+    background-image: url("wood2.jpg");
+}
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
+ */
