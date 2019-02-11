@@ -93,32 +93,11 @@
     <Compile Include="Models\CurrentTimeQuery.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\black-and-white-wallpaper-iphone-black-brick-wallpaper.jpg" />
-    <Content Include="Content\black-bricks-2.jpg" />
-    <Content Include="Content\black-bricks-3.jpg" />
     <Content Include="Content\black-bricks-4.jpg" />
-    <Content Include="Content\Black-bricks-wall_1920x1440.jpg" />
-    <Content Include="Content\black-white-background.jpg" />
-    <Content Include="Content\brick-texture-background.jpg" />
     <Content Include="Content\Chalkboard-Background-xs.png" />
-    <Content Include="Content\chalkboard-background.jpg" />
-    <Content Include="Content\chalkboard-wall.jpg" />
     <Content Include="Content\dark-blue-textured-background.jpg" />
-    <Content Include="Content\mountains.jpg" />
-    <Content Include="Content\pexels-.jpeg" />
-    <Content Include="Content\pexels-water.jpg" />
-    <Content Include="Content\pexels-wood.jpg" />
-    <Content Include="Content\pexels-wood2.jpg" />
-    <Content Include="Content\starry-arch.jpg" />
-    <Content Include="Content\starry-night.jpg" />
-    <Content Include="Content\stars-argentina.jpg" />
-    <Content Include="Content\stars-bg.jpg" />
-    <Content Include="Content\stars-trees.jpg" />
-    <Content Include="Content\wood.jpg" />
     <Content Include="Content\wood2.jpg" />
-    <Content Include="Content\wood3.jpg" />
     <Content Include="Content\wood4.jpg" />
-    <Content Include="Content\wood5.jpg" />
     <Content Include="Content\wood7.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Content\gravel.png" />
@@ -139,12 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\SeeAllQueries.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Tequilla Sunrise.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\chalkmars_regular_sample.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CODE Bold.otf" />

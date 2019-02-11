@@ -71,6 +71,9 @@ section {
     margin:auto;
     text-align:center;
 }
+#seeallqueriestable{
+    visibility:hidden;
+}
 footer{
     background-image: url("wood2.jpg");
 }
