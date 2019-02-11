@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using TimeZoneConverter;
 
@@ -16,7 +14,7 @@ namespace Clockwork.Web.Models
         public string TimezoneId { get; set; }
         public SelectListItem[] TimezoneList { get; set; }
 
-        public CurrentTimeQuery()
+        public CurrentTimeQuery() //Constructor to fill SelectListItem TimezoneList before it is passed to view
         {
             try
             {

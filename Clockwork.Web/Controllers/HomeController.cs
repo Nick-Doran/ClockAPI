@@ -1,10 +1,6 @@
 ﻿using Clockwork.Web.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.Mvc.Ajax;
 
 namespace Clockwork.Web.Controllers
 {
@@ -31,11 +27,6 @@ namespace Clockwork.Web.Controllers
             ViewBag.Title = "Clockwork Web Project";
             ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
             ViewData["Runtime"] = isMono ? "Mono" : ".NET";
-
-            CurrentTimeQueries queries = new CurrentTimeQueries();
-            List<CurrentTimeQuery> list = new List<CurrentTimeQuery>();
-            
-
 
             return View();
         }

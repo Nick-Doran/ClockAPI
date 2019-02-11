@@ -35,5 +35,8 @@
     <Compile Remove="Migrations\20171207214527_InitialCreate.Designer.cs" />
     <Compile Remove="Migrations\20190131180334_Initial.cs" />
     <Compile Remove="Migrations\20190131180334_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190205183018_InitialWithTimezone.cs" />
+    <Compile Remove="Migrations\20190205183018_InitialWithTimezone.Designer.cs" />
+    <Compile Remove="Migrations\InitialCreate.cs" />
   </ItemGroup>
 </Project>

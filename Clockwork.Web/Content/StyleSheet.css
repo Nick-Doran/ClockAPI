@@ -4,7 +4,13 @@
 }
 @media (min-width: 992px) {
     header {
-        padding: 60px 0 30px;
+        padding: 60px 0 30px !important;
+    }
+}
+@media only screen and (min-width: 768px){
+    #myheadertext{
+        font-size: 2em !important;
+        line-height: 43px !important;
     }
 }
 @media (min-width:320px){
@@ -40,25 +46,25 @@ section {
 }
 #canvas {
     padding: 10px 0 10px 0 !important;
-    background-image: url("black-bricks-4.jpg");
+    background-image: url("Chalkboard-Background-xs.png");
 }
- #myheader{
+#myheader{
     background-image: url("wood2.jpg");
- }
- #canvas-box{
+}
+#canvas-box{
      padding: 10px 0 10px 0;
- }
- #dropdown-box{
+}
+#dropdown-box{
      padding:10px 0 10px 0;
- }
+}
 @font-face {
     font-family: 'code';
     src: url("CODE Bold.otf") format('opentype');
 }
 #myheadertext {
     font-family: 'code';
-    font-size:2em;
-   line-height: 43px;
+    font-size:1.5em;
+   line-height: 23px;
 }
 #apiheader{
     margin:auto;
@@ -77,6 +83,9 @@ section {
 footer{
     background-image: url("wood2.jpg");
 }
-/*!
- * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
- */
+#headersubtext{
+    font-size:1em;
+}
+#table_panel_heading{
+    text-align:center;
+}

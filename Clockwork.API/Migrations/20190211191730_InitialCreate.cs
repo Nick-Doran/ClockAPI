@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Clockwork.API.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,7 @@ namespace Clockwork.API.Migrations
                     ClientIp = table.Column<string>(nullable: true),
                     Time = table.Column<DateTime>(nullable: false),
                     UTCTime = table.Column<DateTime>(nullable: false),
-                    Timezone = table.Column<string>(nullable:false)
+                    Timezone = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

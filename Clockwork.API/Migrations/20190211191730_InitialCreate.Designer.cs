@@ -11,8 +11,8 @@ using System;
 namespace Clockwork.API.Migrations
 {
     [DbContext(typeof(ClockworkContext))]
-    [Migration("20190205183018_InitialWithTimezone")]
-    partial class InitialWithTimezone
+    [Migration("20190211191730_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

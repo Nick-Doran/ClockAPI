@@ -89,24 +89,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Models\CurrentTimeQueries.cs" />
     <Compile Include="Models\CurrentTimeQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\black-bricks-4.jpg" />
     <Content Include="Content\Chalkboard-Background-xs.png" />
-    <Content Include="Content\dark-blue-textured-background.jpg" />
     <Content Include="Content\wood2.jpg" />
-    <Content Include="Content\wood4.jpg" />
-    <Content Include="Content\wood7.jpg" />
     <Content Include="favicon.ico" />
-    <Content Include="Content\gravel.png" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\clock.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
