@@ -36,13 +36,12 @@
     }
     function SeeAllQueries() {
 
-        var results, htmlbox, htmlboxcontainer, xhttp, i;
+        var results, htmlbox, xhttp, i;
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 results = this.responseText;
                 results = JSON.parse(results);
-                //hmtlboxcontainer = '<div class="panel panel-primary panel-padding"> <div id="table_panel_heading" class="panel-heading">Data retrieved from GetTimeQueries service of TimeQueries API</div> <div id="htmlbox" class="panel-body"></div ></div >'
                 htmlbox = '<table class="display" id="Table_ID"> <thead> <tr> <th>Query ID</th><th>Time</th> <th>Cient Ip</th> <th>UTC Time</th> <th>Time Zone</th> </tr> </thead> <tbody>';
                 for (i = 0; i < results.length; i++) {
                     results[i].time = results[i].time.replace("T", " ");
@@ -61,7 +60,6 @@
                 };
                 htmlbox += "</tbody> </table>";
                 document.getElementById('seeallqueriestable').style.visibility = 'visible';
-
                 document.getElementById('htmlbox').innerHTML = htmlbox;
                 $("#Table_ID").DataTable();
             }
