@@ -37,7 +37,6 @@ namespace Clockwork.API.Controllers
                     Console.WriteLine(" - {0}", CurrentTimeQuery.UTCTime);
                 }
             }
-
             return Ok(returnVal);
         }
 
