@@ -97,6 +97,7 @@
     <Content Include="Content\wood2.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Content\StyleSheet.css" />
+    <Content Include="Scripts\AJAX.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\clock.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
